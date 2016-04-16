@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+   <!-- Make sure to ADD line about orientation
+   "vertical" will make the boxes go left to right across the screen-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/qa_sample_layout">
+
+    <TextView
+        android:id="@+id/questText"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/start_question_line"
+         />
+
+    <TextView
+        android:id="@+id/ansText"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/start_ans_line"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_below="@+id/questText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <!--clickable text 'more info' link that will take user to a website. Made focusable because the
+    'more info' is the only clickable part in the UNfocusable list item. Don't want the entire list
+    to change color-->
+    <TextView
+        android:id="@+id/moreInfo"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/more_info_link"
+        android:layout_below="@+id/ansText"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+
+        android:onClick="onMoreInfoClick"
+        android:clickable="true"
+
+        android:focusable="true"/>
+
+
+</RelativeLayout>

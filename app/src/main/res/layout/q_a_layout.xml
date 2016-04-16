@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="@dimen/abc_action_bar_default_padding_material"
+    android:weightSum="1"
+    android:id="@+id/q_a_layout">
+    <!--What is the android style padding???-->
+
+
+    <!-- layout for icon/text title at top of page-->
+    <LinearLayout
+        android:id="@+id/q_a_header"
+
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        >
+
+        <!--This will be the icon for the current overall situation chosen from first page-->
+        <ImageView
+        android:id="@+id/q_a_page_icon"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_launcher"
+        />
+
+        <!--Title of sub-situation chosen from overall situation page-->
+                <!-- how to move text to the center-vertical of the linearview?? -->
+        <TextView
+        android:id="@+id/qa_title"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qa_sample_title"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:gravity="center_vertical"
+        />
+
+    </LinearLayout> <!--end of header-->
+
+    <!--generic list that will be filled with q-a info from sample. Made unfocusable since the items
+    will not be clicked.-->
+    <ListView
+        android:id="@+id/q_a_listView"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="70dp"
+
+        android:focusable="false"
+        />
+</LinearLayout>
